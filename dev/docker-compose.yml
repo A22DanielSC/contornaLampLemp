@@ -15,6 +15,7 @@ services:
       - ./apache/.env.dev
     volumes:
       - ./database/backup:/docker-entrypoint-initdb.b
+      - ./database/backup:/database/backup
       - datos:/var/lib/mysql
 volumes:
   datos:
