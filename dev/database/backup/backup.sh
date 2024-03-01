@@ -1,2 +1,2 @@
 #!/bin/bash
-docker compose exec basedatos /bin/bash -c "mysqldump -u a22danielsc -pabc123. prestashowdb" >./database/backup/backup.sql
+docker compose exec basedatos bash -c "mysqldump -u a22danielsc -p prestashowdb" > ./database/backup/backup.sql
