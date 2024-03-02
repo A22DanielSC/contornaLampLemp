@@ -149,10 +149,10 @@ CREATE TABLE `ps_admin_filter` (
   `id` int NOT NULL AUTO_INCREMENT,
   `employee` int NOT NULL,
   `shop` int NOT NULL,
-  `controller` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `action` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `filter` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `filter_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `controller` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `action` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `filter` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `filter_id` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `admin_filter_search_id_idx` (`employee`,`shop`,`controller`,`action`,`filter_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -204,10 +204,10 @@ DROP TABLE IF EXISTS `ps_api_access`;
 CREATE TABLE `ps_api_access` (
   `id_api_access` int unsigned NOT NULL AUTO_INCREMENT,
   `id_authorized_application` int unsigned NOT NULL,
-  `client_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `client_secret` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `client_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `client_secret` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `active` tinyint(1) NOT NULL,
-  `scopes` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '(DC2Type:array)',
+  `scopes` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '(DC2Type:array)',
   PRIMARY KEY (`id_api_access`),
   KEY `IDX_6E064442D8BFF738` (`id_authorized_application`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -283,7 +283,7 @@ DROP TABLE IF EXISTS `ps_attribute`;
 CREATE TABLE `ps_attribute` (
   `id_attribute` int NOT NULL AUTO_INCREMENT,
   `id_attribute_group` int NOT NULL,
-  `color` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `color` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `position` int NOT NULL,
   PRIMARY KEY (`id_attribute`),
   KEY `attribute_group` (`id_attribute_group`)
@@ -310,7 +310,7 @@ DROP TABLE IF EXISTS `ps_attribute_group`;
 CREATE TABLE `ps_attribute_group` (
   `id_attribute_group` int NOT NULL AUTO_INCREMENT,
   `is_color_group` tinyint(1) NOT NULL,
-  `group_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `group_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `position` int NOT NULL,
   PRIMARY KEY (`id_attribute_group`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -336,8 +336,8 @@ DROP TABLE IF EXISTS `ps_attribute_group_lang`;
 CREATE TABLE `ps_attribute_group_lang` (
   `id_attribute_group` int NOT NULL,
   `id_lang` int NOT NULL,
-  `name` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `public_name` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `public_name` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_attribute_group`,`id_lang`),
   KEY `IDX_4653726C67A664FB` (`id_attribute_group`),
   KEY `IDX_4653726CBA299860` (`id_lang`)
@@ -390,7 +390,7 @@ DROP TABLE IF EXISTS `ps_attribute_lang`;
 CREATE TABLE `ps_attribute_lang` (
   `id_attribute` int NOT NULL,
   `id_lang` int NOT NULL,
-  `name` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_attribute`,`id_lang`),
   KEY `IDX_3ABE46A77A4F53DC` (`id_attribute`),
   KEY `IDX_3ABE46A7BA299860` (`id_lang`)
@@ -467,8 +467,8 @@ DROP TABLE IF EXISTS `ps_authorized_application`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `ps_authorized_application` (
   `id_authorized_application` int unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_authorized_application`),
   UNIQUE KEY `UNIQ_475B9BA55E237E06` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1564,7 +1564,7 @@ CREATE TABLE `ps_connections` (
   KEY `id_guest` (`id_guest`),
   KEY `date_add` (`date_add`),
   KEY `id_page` (`id_page`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1573,7 +1573,7 @@ CREATE TABLE `ps_connections` (
 
 LOCK TABLES `ps_connections` WRITE;
 /*!40000 ALTER TABLE `ps_connections` DISABLE KEYS */;
-INSERT INTO `ps_connections` VALUES (1,1,1,1,1,2130706433,'2024-02-29 21:39:18','https://www.prestashop.com'),(2,1,1,3,1,2887450625,'2024-02-29 21:42:32',''),(3,1,1,4,1,2887450625,'2024-02-29 21:42:32',''),(4,1,1,4,1,2887516161,'2024-02-29 22:14:05',''),(5,1,1,4,1,2887647233,'2024-03-01 15:16:00','');
+INSERT INTO `ps_connections` VALUES (1,1,1,1,1,2130706433,'2024-02-29 21:39:18','https://www.prestashop.com'),(2,1,1,3,1,2887450625,'2024-02-29 21:42:32',''),(3,1,1,4,1,2887450625,'2024-02-29 21:42:32',''),(4,1,1,4,1,2887516161,'2024-02-29 22:14:05',''),(5,1,1,4,1,2887647233,'2024-03-01 15:16:00',''),(6,1,1,4,1,2886860801,'2024-03-01 15:54:19',''),(7,1,1,5,1,2886926337,'2024-03-01 16:20:14',''),(8,1,1,6,1,2886991873,'2024-03-01 16:21:45','');
 /*!40000 ALTER TABLE `ps_connections` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1621,7 +1621,7 @@ CREATE TABLE `ps_connections_source` (
   KEY `orderby` (`date_add`),
   KEY `http_referer` (`http_referer`),
   KEY `request_uri` (`request_uri`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1630,7 +1630,7 @@ CREATE TABLE `ps_connections_source` (
 
 LOCK TABLES `ps_connections_source` WRITE;
 /*!40000 ALTER TABLE `ps_connections_source` DISABLE KEYS */;
-INSERT INTO `ps_connections_source` VALUES (1,2,'','localhost/','','2024-02-29 21:42:32'),(2,3,'','localhost/','','2024-02-29 21:42:32'),(3,3,'','localhost/','','2024-02-29 21:42:42'),(4,3,'','localhost/','','2024-02-29 21:47:20'),(5,3,'','localhost/','','2024-02-29 22:02:04'),(6,4,'','localhost/','','2024-02-29 22:14:05'),(7,3,'','localhost/','','2024-02-29 22:14:09'),(8,3,'','localhost/','','2024-02-29 22:14:38'),(9,5,'','localhost/','','2024-03-01 15:16:00'),(10,3,'','localhost/','','2024-03-01 15:16:01'),(11,3,'','localhost/','','2024-03-01 15:16:09'),(12,3,'','localhost/','','2024-03-01 15:16:21'),(13,3,'','localhost/','','2024-03-01 15:43:18'),(14,3,'','localhost/','','2024-03-01 15:44:06');
+INSERT INTO `ps_connections_source` VALUES (1,2,'','localhost/','','2024-02-29 21:42:32'),(2,3,'','localhost/','','2024-02-29 21:42:32'),(3,3,'','localhost/','','2024-02-29 21:42:42'),(4,3,'','localhost/','','2024-02-29 21:47:20'),(5,3,'','localhost/','','2024-02-29 22:02:04'),(6,4,'','localhost/','','2024-02-29 22:14:05'),(7,3,'','localhost/','','2024-02-29 22:14:09'),(8,3,'','localhost/','','2024-02-29 22:14:38'),(9,5,'','localhost/','','2024-03-01 15:16:00'),(10,3,'','localhost/','','2024-03-01 15:16:01'),(11,3,'','localhost/','','2024-03-01 15:16:09'),(12,3,'','localhost/','','2024-03-01 15:16:21'),(13,3,'','localhost/','','2024-03-01 15:43:18'),(14,3,'','localhost/','','2024-03-01 15:44:06'),(15,6,'','localhost/','','2024-03-01 15:54:19'),(16,6,'','localhost/','','2024-03-01 16:18:42'),(17,6,'','localhost/','','2024-03-01 16:18:58'),(18,6,'','localhost/','','2024-03-01 16:19:04'),(19,6,'','localhost/','','2024-03-01 16:19:15'),(20,6,'','localhost/','','2024-03-01 16:19:44'),(21,7,'','localhost/','','2024-03-01 16:20:14'),(22,8,'','localhost/','','2024-03-01 16:21:45'),(23,8,'','localhost/','','2024-03-01 16:21:50'),(24,8,'','localhost/','','2024-03-01 16:21:53'),(25,8,'','localhost/','','2024-03-01 16:22:19'),(26,8,'','localhost/','','2024-03-01 16:22:54');
 /*!40000 ALTER TABLE `ps_connections_source` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2431,13 +2431,13 @@ DROP TABLE IF EXISTS `ps_feature_flag`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `ps_feature_flag` (
   `id_feature_flag` int unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `state` tinyint(1) NOT NULL DEFAULT '0',
-  `label_wording` varchar(512) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `label_domain` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `description_wording` varchar(512) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `description_domain` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `stability` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'beta',
+  `label_wording` varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `label_domain` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `description_wording` varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `description_domain` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `stability` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'beta',
   PRIMARY KEY (`id_feature_flag`),
   UNIQUE KEY `UNIQ_91700F175E237E06` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -2840,7 +2840,7 @@ CREATE TABLE `ps_guest` (
   KEY `id_customer` (`id_customer`),
   KEY `id_operating_system` (`id_operating_system`),
   KEY `id_web_browser` (`id_web_browser`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2849,7 +2849,7 @@ CREATE TABLE `ps_guest` (
 
 LOCK TABLES `ps_guest` WRITE;
 /*!40000 ALTER TABLE `ps_guest` DISABLE KEYS */;
-INSERT INTO `ps_guest` VALUES (1,0,0,2,0,0,0,0,0,0,0,0,0,0,'',0),(2,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),(3,6,11,0,0,0,0,0,0,0,0,0,0,0,'es',0),(4,6,11,0,0,0,0,0,0,0,0,0,0,0,'es',0);
+INSERT INTO `ps_guest` VALUES (1,0,0,2,0,0,0,0,0,0,0,0,0,0,'',0),(2,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),(3,6,11,0,0,0,0,0,0,0,0,0,0,0,'es',0),(4,6,11,0,0,0,0,0,0,0,0,0,0,0,'es',0),(5,6,11,0,0,0,0,0,0,0,0,0,0,0,'es',0),(6,6,11,0,0,0,0,0,0,0,0,0,0,0,'es',0);
 /*!40000 ALTER TABLE `ps_guest` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3265,13 +3265,13 @@ DROP TABLE IF EXISTS `ps_lang`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `ps_lang` (
   `id_lang` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `active` tinyint(1) NOT NULL,
-  `iso_code` varchar(2) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `language_code` varchar(5) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `locale` varchar(5) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `date_format_lite` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `date_format_full` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `iso_code` varchar(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `language_code` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `locale` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `date_format_lite` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `date_format_full` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `is_rtl` tinyint(1) NOT NULL,
   PRIMARY KEY (`id_lang`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -6381,10 +6381,10 @@ DROP TABLE IF EXISTS `ps_shop`;
 CREATE TABLE `ps_shop` (
   `id_shop` int NOT NULL AUTO_INCREMENT,
   `id_shop_group` int NOT NULL,
-  `name` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `color` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `color` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `id_category` int NOT NULL,
-  `theme_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `theme_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `active` tinyint(1) NOT NULL,
   `deleted` tinyint(1) NOT NULL,
   PRIMARY KEY (`id_shop`),
@@ -6411,8 +6411,8 @@ DROP TABLE IF EXISTS `ps_shop_group`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `ps_shop_group` (
   `id_shop_group` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `color` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `color` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `share_customer` tinyint(1) NOT NULL,
   `share_order` tinyint(1) NOT NULL,
   `share_stock` tinyint(1) NOT NULL,
@@ -6847,8 +6847,8 @@ CREATE TABLE `ps_stock_mvt` (
   `id_supply_order` int DEFAULT NULL,
   `id_stock_mvt_reason` int NOT NULL,
   `id_employee` int NOT NULL,
-  `employee_lastname` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `employee_firstname` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `employee_lastname` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `employee_firstname` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `physical_quantity` int unsigned NOT NULL,
   `date_add` datetime NOT NULL,
   `sign` smallint NOT NULL DEFAULT '1',
@@ -7311,14 +7311,14 @@ CREATE TABLE `ps_tab` (
   `id_tab` int NOT NULL AUTO_INCREMENT,
   `id_parent` int NOT NULL,
   `position` int NOT NULL,
-  `module` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `class_name` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `route_name` varchar(256) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `module` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `class_name` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `route_name` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `active` tinyint(1) NOT NULL,
   `enabled` tinyint(1) NOT NULL,
-  `icon` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `wording` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `wording_domain` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `icon` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `wording` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `wording_domain` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id_tab`)
 ) ENGINE=InnoDB AUTO_INCREMENT=130 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -7343,7 +7343,7 @@ DROP TABLE IF EXISTS `ps_tab_lang`;
 CREATE TABLE `ps_tab_lang` (
   `id_tab` int NOT NULL,
   `id_lang` int NOT NULL,
-  `name` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_tab`,`id_lang`),
   KEY `IDX_CFD9262DED47AB56` (`id_tab`),
   KEY `IDX_CFD9262DBA299860` (`id_lang`)
@@ -7612,9 +7612,9 @@ CREATE TABLE `ps_translation` (
   `id_translation` int NOT NULL AUTO_INCREMENT,
   `id_lang` int NOT NULL,
   `key` text CHARACTER SET utf8mb3 COLLATE utf8mb3_bin NOT NULL,
-  `translation` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `domain` varchar(80) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `theme` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `translation` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `domain` varchar(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `theme` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id_translation`),
   KEY `IDX_ADEBEB36BA299860` (`id_lang`),
   KEY `key` (`domain`)
@@ -7983,4 +7983,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-03-01 14:44:34
+-- Dump completed on 2024-03-02  9:25:49
