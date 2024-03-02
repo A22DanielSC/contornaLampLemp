@@ -1,7 +1,7 @@
-<?php return array (
-  'parameters' => 
-  array (
-    'database_host' => 'basedatos',
+<?php return array(
+  'parameters' =>
+  array(
+    'database_host' => 'localhost',
     'database_port' => '',
     'database_name' => 'prestashowdb',
     'database_user' => 'a22danielsc',
