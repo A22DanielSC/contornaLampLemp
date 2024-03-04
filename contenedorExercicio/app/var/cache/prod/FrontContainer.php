@@ -341,7 +341,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
      */
     protected function getDoctrine_Dbal_DefaultConnectionService()
     {
-        return $this->services['doctrine.dbal.default_connection'] = (new \Doctrine\Bundle\DoctrineBundle\ConnectionFactory([]))->createConnection(['driver' => 'pdo_mysql', 'host' => 'basedatos', 'port' => '', 'dbname' => 'prestashowdb', 'user' => 'a22danielsc', 'password' => 'abc123.', 'charset' => 'utf8mb4', 'driverOptions' => [1002 => 'SET sql_mode=(SELECT REPLACE(@@sql_mode,\'ONLY_FULL_GROUP_BY\',\'\'))', 1013 => $this->getEnv('const:runtime:_PS_ALLOW_MULTI_STATEMENTS_QUERIES_')], 'defaultTableOptions' => []], new \Doctrine\DBAL\Configuration(), new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this), ['enum' => 'string']);
+        return $this->services['doctrine.dbal.default_connection'] = (new \Doctrine\Bundle\DoctrineBundle\ConnectionFactory([]))->createConnection(['driver' => 'pdo_mysql', 'host' => '143.47.180.164', 'port' => '', 'dbname' => 'prestashowdb', 'user' => 'a22danielsc', 'password' => 'abc123.', 'charset' => 'utf8mb4', 'driverOptions' => [1002 => 'SET sql_mode=(SELECT REPLACE(@@sql_mode,\'ONLY_FULL_GROUP_BY\',\'\'))', 1013 => $this->getEnv('const:runtime:_PS_ALLOW_MULTI_STATEMENTS_QUERIES_')], 'defaultTableOptions' => []], new \Doctrine\DBAL\Configuration(), new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this), ['enum' => 'string']);
     }
 
     /**
@@ -856,7 +856,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
     protected function getDefaultParameters(): array
     {
         return [
-            'database_host' => 'basedatos',
+            'database_host' => '143.47.180.164',
             'database_port' => '',
             'database_name' => 'prestashowdb',
             'database_user' => 'a22danielsc',
@@ -867,17 +867,17 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
             'mailer_host' => '127.0.0.1',
             'mailer_user' => NULL,
             'mailer_password' => NULL,
-            'secret' => 'uz4gg3bRf3th1NarPAIP88uy1AOwBbY6Wym1trwcKKBkSdW9kNnqTveErVBPXLEF',
+            'secret' => 'TmzCTwv9yP8fku6LWmscMTkYdDHovTO0an7ArRMZXLzJKTnH3gFALffRxwXbftqH',
             'ps_caching' => 'CacheMemcache',
             'ps_cache_enable' => false,
-            'ps_creation_date' => '2024-03-03',
-            'locale' => 'es-ES',
+            'ps_creation_date' => '2024-03-04',
+            'locale' => 'en-US',
             'use_debug_toolbar' => true,
-            'cookie_key' => 'HD5Dd3z0GfPkQyCJZCbRFO1PeGMeYD9fnJ0XpIWuCLm7sWU1oMsdsoNjLJLVWHhe',
-            'cookie_iv' => 'cebiVBZuGgvWYYHdokgHMRZ97YFy1gUu',
-            'new_cookie_key' => 'def000006afb3a8a77b33667c2e3ed998db876e7a752e2a41a640989c8ee995406b7c14efd15fc8d64ab9ab8a668fce84c7abbd61e5d6586c25957260c1cd75da866bd02',
-            'api_public_key' => '-----BEGIN PUBLIC KEY-----'."\n".'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzXCT56N8k2h4nba0TYSE'."\n".'nkV5BZR8NqZnUKTXy64fjoEekq524ml5+YfkyEF/0ODrse38FnfRLxjuzIVzO0kR'."\n".'k5PdSesWQ4ByZeamHc5X9oijjAPFVL63JjAzky6tDeR/JCqqHDL95DNxXPU66CMf'."\n".'VnvgML6lA3Xu1BRmLsAhMX5BG+YYJUrOOI2V38wVbXC22L/D1mcNwCtduyXJpEF+'."\n".'hSmNKJUkd7m2q6j3baWjFXyw1eJFQC+CukvNTuL35rWxQzBRwzWA3NdwlLREyYQU'."\n".'ON8OV4gCB/1wNyf+ikHlAvySA9riFQWfrWIBHCBcKvVV8PB67P0p+CzbbghQsNgT'."\n".'RwIDAQAB'."\n".'-----END PUBLIC KEY-----'."\n".'',
-            'api_private_key' => '-----BEGIN PRIVATE KEY-----'."\n".'MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDNcJPno3yTaHid'."\n".'trRNhISeRXkFlHw2pmdQpNfLrh+OgR6SrnbiaXn5h+TIQX/Q4Oux7fwWd9EvGO7M'."\n".'hXM7SRGTk91J6xZDgHJl5qYdzlf2iKOMA8VUvrcmMDOTLq0N5H8kKqocMv3kM3Fc'."\n".'9TroIx9We+AwvqUDde7UFGYuwCExfkEb5hglSs44jZXfzBVtcLbYv8PWZw3AK127'."\n".'JcmkQX6FKY0olSR3ubarqPdtpaMVfLDV4kVAL4K6S81O4vfmtbFDMFHDNYDc13CU'."\n".'tETJhBQ43w5XiAIH/XA3J/6KQeUC/JID2uIVBZ+tYgEcIFwq9VXw8Hrs/Sn4LNtu'."\n".'CFCw2BNHAgMBAAECggEAWf6X/CAFAXoBZG1V3KNRiRe75TLfmv0YQx6DHcmAL2fm'."\n".'obDliVdVRHdARG1U9YaiGUa8aIdCTpRof5VyHiVrGq/qf2gJT7aj5nm8iVAL/oZq'."\n".'xnocZnxJNORmo3IOAwj2nTxHWqUHzYCvh14x2OER6EvJsPDCzppJ7gOlo5Mst0Xj'."\n".'LYdnvFCiYuyXNLkhEgO5Pu8NyZaL3Hl2+1o/xJSxFAQxlr2yobI3fPzd8WBivLNI'."\n".'gtk/SeEIqpM8oUnPW/VEnEQqT3zgvy5wku+CUEIQ26tpIQ0UvQgngRPaKN0mgzGw'."\n".'vaZtwwoLlDXKNk0yHcoJb9WW2LBOM681tNbsJW/ASQKBgQDzcx+5WqtXouYEuQEc'."\n".'CUVQh22x5akC4k3LgZxfsUszEXm2swCvz4BIdBkGafB1YuTBfdSGGj8OTZz0Q6xG'."\n".'uzjWSATa2+m+ryljRbs2Z+RoN7fQLpxYuKi/LqQrdoVvul3w4kfBpeaGyRRQis8S'."\n".'oD7GLVbcTiQ/Ozu+jBbPdlNPZQKBgQDYB9NZ5gWQ9xduL1diVb5Zv2Ypp3DsdZPZ'."\n".'iUDWOLmgRgwCDi8Z3C0vjhTVRXWQKwJk1YKRYnu3dSVqjDsQh/FzKfWppQpb0aUs'."\n".'OsHUoKn6nqTi08B1xvRGhFD36DfXF4U+POUkZeKW5YWWR4HhrQ9vmfK/nr0tS4x9'."\n".'OyTikq67OwKBgQDSjl1/yIWtFDzxFLl68CG9FoSvejyFPAmg24bN1N9/Wbv1YjhT'."\n".'1pnTEGacf3/zZwcGurfXDFhBHKuFMAqOWls8KanZSJ6Px5t6OtNCqPSJlrcqHUYo'."\n".'Df4U7FgdJzMdgQjC0FLTj5MkPEGPr56NM39Xk9suS39aGPcBRNRttp8zaQKBgQC4'."\n".'4xGued+/rsl9wsSd41ZTBy0Pbz+FECfmYMJ91PSBSBHU3IDROA/wCECqOpUgOr8E'."\n".'v3rMpKXPYFISe0u9nSs27e1TMG3KIYWkcfEb4hk35fimLKYl5o1/oJSPZ04LJxUh'."\n".'LArMeOpRTMRk1nRBSdTRJceM2fV8Q5FMSIcL5o/mqwKBgBRlrP0VowzLm0rpLfpQ'."\n".'qSIOoP9rhOIUxGLpoAngxJf1rlLYX7IF3h7jSXX26pHS4EV2XSlZ9QJmi41c6iH6'."\n".'D6CC7H5URen6fkZNnwn4027EXPx/+Q155/poZWHdqe6s23wAaje5x8ILFKeUgGpY'."\n".'JIekP5Yp1wmFrYM+pFApVI6W'."\n".'-----END PRIVATE KEY-----'."\n".'',
+            'cookie_key' => 'LF5rrOftxUUAEoj4uCIvFbJPVACdsnDigIZyrrUzkvLo3HpCInZkuXhtQfmeoNnA',
+            'cookie_iv' => 'wNTeQcj8svDoZqe2PKhYFqPKu2rVGjAv',
+            'new_cookie_key' => 'def000000d9e473a1e3731784c2b170c287a42131368075ce007a301917d83bc11d19109376a03d8cf43c8539a0ea006ecefe55ba6600dd54a3137003d551cce4e611051',
+            'api_public_key' => '-----BEGIN PUBLIC KEY-----'."\n".'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv818dRz2hmgqL0zsbe92'."\n".'GNZ7bIhjH+P5Ns/vpvqcMxv/N6TQXoJwBVNbZkIho4vsbhoEWMjodgOdoMcFMz4Q'."\n".'GCszoTBFixL8MR05a+goabLgLn8l2BjEmsmEGnWugnyTD6hvvRYGSO3Tp3nd7D8D'."\n".'Y7NADS6KimyhsZwpl5JGjhrvah+3NhHYPGJWzSUvjQU1KeNfHH111RmPlo9BM9CS'."\n".'cD/UooIkmq9jH0NauWGQBIBZQzaPsx6METuSSkSxGz5ZIooHOfwHokbMH83bj0RX'."\n".'N3J2p2DMyw9yh8cth6UDJu5Z43GHVppf4t8zvkvU6uVWZt3sQijzndORlL7Wzw/F'."\n".'PQIDAQAB'."\n".'-----END PUBLIC KEY-----'."\n".'',
+            'api_private_key' => '-----BEGIN PRIVATE KEY-----'."\n".'MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC/zXx1HPaGaCov'."\n".'TOxt73YY1ntsiGMf4/k2z++m+pwzG/83pNBegnAFU1tmQiGji+xuGgRYyOh2A52g'."\n".'xwUzPhAYKzOhMEWLEvwxHTlr6ChpsuAufyXYGMSayYQada6CfJMPqG+9FgZI7dOn'."\n".'ed3sPwNjs0ANLoqKbKGxnCmXkkaOGu9qH7c2Edg8YlbNJS+NBTUp418cfXXVGY+W'."\n".'j0Ez0JJwP9SigiSar2MfQ1q5YZAEgFlDNo+zHowRO5JKRLEbPlkiigc5/AeiRswf'."\n".'zduPRFc3cnanYMzLD3KHxy2HpQMm7lnjcYdWml/i3zO+S9Tq5VZm3exCKPOd05GU'."\n".'vtbPD8U9AgMBAAECggEAFu5++FOPp+8xR/l29Qfhw0N1ezrtOwVbKPIAcaLZ5QRu'."\n".'ZZ03am1G7mQSc+3pLrAOgvVqWqEepel1waC53vAHJZSYtida0S9iZo7bbCrUFhsU'."\n".'UYrTH/yKGQWJ3U3/oMs7G+6j+WP2OWbx3L6lyVaZVaS7Pjg3ySgGxwDoOh57gAbE'."\n".'InBuWkRy31u3DcuU6IDQkTsCrGzt9fkWUngQir+MMxbgLNzJoWQxnBfAhV+84O9c'."\n".'xRQr/SRtBy8m4AQK+3l8gm0e80Nu/Sku6itdGEXQPswU+SiALI//ILhdKWcrMlvl'."\n".'5m7+Eg2660LV4uJZbWhUUHRoQ4OkEUP75gvlMRmBcwKBgQD1Hvnbt4CZaFdwwFGZ'."\n".'UI4IlOTq5/FIncwyUpt+JBBP4ANKegcnvraWZ1s6j+4XXl9JAjBscQGrSARLdrmK'."\n".'2sT1ebQu7y6R/rIrpQLqsf/ygIuM3H2gzmKde5JHwBqaKYKoigj0mJhdX7nc6Xwd'."\n".'kMk6d139TbQXho7K73klx/5LTwKBgQDIULdePZLClWyXGSwKBbd0Ib3ZOoXsdrNG'."\n".'Pw4chefcJi5qtCdU78bYLUS2vgBYCW1gzuto9AvZuayyfabrp4WoeB4NuxEU+fFh'."\n".'MvzBuxRAO5Z/w7/b7DP05UdHgiroOrnqvifRSnhyL1FonSnhV90HaIqkg8ZGdQCe'."\n".'ADiQ5SHTswKBgQDBzE7Rl2C2aVeQzoz1QUo6oLXov571wcTbGJLVhV/cNwmDDb2w'."\n".'f8lOWsM3JuqgUT3WtENiyWn/aL30iBakINlOF34NCY/xX8SwWxNWSYtJyLYMlZtB'."\n".'00sGpdd+oPSnZCBoblIsSKVWVcPWVEeL/JgMgKmwBopXe0xUSEepRljYYwKBgGnu'."\n".'1aoO4efpYY3ej/2U3Fmb5mxUmLJea5xAiFPpNJ6lynI/Z3VxgDSea/JANKpaAe/q'."\n".'PXA5b3Lq0DtsW7PP2c0oCKy2Ouhe7Zm7fxNsvd7iJErY2EOTfD6Mac+VNN+u/tb3'."\n".'TNNPkLbB80lho945uvfJ/1fVICvugC8OatulcOglAoGANXOmFQY+xzGZXoNFeXr+'."\n".'TmFQ5Qe7ckzDGueHPKjExJ51bPysr3KkhiBkxnYhh9vJb3GU1XLKGLGIdCi9RPde'."\n".'PmrqxgB1MewhRa9UGlCptvSSiBXMGkLkKJnTZZ2gt0v2e3dLZJD+bq1v6BfZ4fgs'."\n".'4IDsL9YpR960zQGbzYzHPvk='."\n".'-----END PRIVATE KEY-----'."\n".'',
             'cache.driver' => 'array',
             'cache.adapter' => 'cache.adapter.array',
             'kernel.bundles' => [

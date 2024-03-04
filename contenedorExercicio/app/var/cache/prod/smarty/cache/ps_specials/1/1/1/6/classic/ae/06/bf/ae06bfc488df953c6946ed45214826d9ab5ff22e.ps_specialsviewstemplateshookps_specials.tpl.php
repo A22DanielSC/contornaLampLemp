@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-03-03 23:39:24
+/* Smarty version 4.3.4, created on 2024-03-04 16:40:48
   from 'module:ps_specialsviewstemplateshookps_specials.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_65e4fc1c83c2d4_09817596',
+  'unifunc' => 'content_65e5eb80ec6345_86982709',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -36,11 +36,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 31536000,
 ),true)) {
-function content_65e4fc1c83c2d4_09817596 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65e5eb80ec6345_86982709 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <section class="featured-products clearfix mt-3">
   <h2 class="h2 products-section-title text-uppercase">
-    En oferta
+    On sale
   </h2>
   
 
@@ -68,7 +68,7 @@ function content_65e4fc1c83c2d4_09817596 (Smarty_Internal_Template $_smarty_tpl)
         <div class="highlighted-informations no-variants">
           
             <a class="quick-view js-quick-view" href="#" data-link-action="quickview">
-              <i class="material-icons search">&#xE8B6;</i> Vista rápida
+              <i class="material-icons search">&#xE8B6;</i> Quick view
             </a>
           
 
@@ -86,12 +86,12 @@ function content_65e4fc1c83c2d4_09817596 (Smarty_Internal_Template $_smarty_tpl)
                       <div class="product-price-and-shipping">
                               
 
-                <span class="regular-price" aria-label="Precio base">43,44 €</span>
+                <span class="regular-price" aria-label="Regular price">43,44 €</span>
                                   <span class="discount-percentage discount-product">-20%</span>
                               
               
 
-              <span class="price" aria-label="Precio">
+              <span class="price" aria-label="Price">
                                                   34,75 €
                               </span>
 
@@ -114,7 +114,7 @@ function content_65e4fc1c83c2d4_09817596 (Smarty_Internal_Template $_smarty_tpl)
       
     <ul class="product-flags js-product-flags">
                     <li class="product-flag discount">-20%</li>
-                    <li class="product-flag new">Nuevo</li>
+                    <li class="product-flag new">New</li>
             </ul>
 
     </div>
@@ -144,7 +144,7 @@ function content_65e4fc1c83c2d4_09817596 (Smarty_Internal_Template $_smarty_tpl)
         <div class="highlighted-informations">
           
             <a class="quick-view js-quick-view" href="#" data-link-action="quickview">
-              <i class="material-icons search">&#xE8B6;</i> Vista rápida
+              <i class="material-icons search">&#xE8B6;</i> Quick view
             </a>
           
 
@@ -175,12 +175,12 @@ function content_65e4fc1c83c2d4_09817596 (Smarty_Internal_Template $_smarty_tpl)
                       <div class="product-price-and-shipping">
                               
 
-                <span class="regular-price" aria-label="Precio base">28,92 €</span>
+                <span class="regular-price" aria-label="Regular price">28,92 €</span>
                                   <span class="discount-percentage discount-product">-20%</span>
                               
               
 
-              <span class="price" aria-label="Precio">
+              <span class="price" aria-label="Price">
                                                   23,14 €
                               </span>
 
@@ -203,7 +203,7 @@ function content_65e4fc1c83c2d4_09817596 (Smarty_Internal_Template $_smarty_tpl)
       
     <ul class="product-flags js-product-flags">
                     <li class="product-flag discount">-20%</li>
-                    <li class="product-flag new">Nuevo</li>
+                    <li class="product-flag new">New</li>
             </ul>
 
     </div>
@@ -212,7 +212,7 @@ function content_65e4fc1c83c2d4_09817596 (Smarty_Internal_Template $_smarty_tpl)
 
     </div>
   <a class="all-product-link float-xs-left float-md-right h4" href="https://localhost/productos-rebajados">
-    Todas los productos en oferta<i class="material-icons">&#xE315;</i>
+    All sale products<i class="material-icons">&#xE315;</i>
   </a>
 </section>
 <?php }

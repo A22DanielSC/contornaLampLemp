@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-03-03 23:39:19
+/* Smarty version 4.3.4, created on 2024-03-04 16:42:36
   from 'module:ps_imagesliderviewstemplateshookslider.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_65e4fc17526cd4_29813927',
+  'unifunc' => 'content_65e5ebec6d9dc4_73687722',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -18,7 +18,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 31536000,
 ),true)) {
-function content_65e4fc17526cd4_29813927 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65e5ebec6d9dc4_73687722 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
   <div id="carousel" data-ride="carousel" class="carousel slide" data-interval="5000" data-wrap="true" data-pause="hover" data-touch="true">
     <ol class="carousel-indicators">
@@ -26,7 +26,7 @@ function content_65e4fc17526cd4_29813927 (Smarty_Internal_Template $_smarty_tpl)
             <li data-target="#carousel" data-slide-to="1"></li>
             <li data-target="#carousel" data-slide-to="2"></li>
           </ol>
-    <ul class="carousel-inner" role="listbox" aria-label="Contenedor carrusel ">
+    <ul class="carousel-inner" role="listbox" aria-label="Carousel container">
               <li class="carousel-item active" role="option" aria-hidden="false">
           <a href="https://www.prestashop-project.org?utm_source=back-office&amp;utm_medium=v17_homeslider&amp;utm_campaign=back-office-ES&amp;utm_content=download">            <figure>
               <img src="https://localhost/modules/ps_imageslider/images/sample-1.jpg" alt="sample-1" loading="lazy" width="1110" height="340">
@@ -58,13 +58,13 @@ function content_65e4fc17526cd4_29813927 (Smarty_Internal_Template $_smarty_tpl)
                           </figure>
           </a>        </li>
           </ul>
-    <div class="direction" aria-label="Botones del carrusel">
-      <a class="left carousel-control" href="#carousel" role="button" data-slide="prev" aria-label="Anterior">
+    <div class="direction" aria-label="Carousel buttons">
+      <a class="left carousel-control" href="#carousel" role="button" data-slide="prev" aria-label="Previous">
         <span class="icon-prev hidden-xs" aria-hidden="true">
           <i class="material-icons">&#xE5CB;</i>
         </span>
       </a>
-      <a class="right carousel-control" href="#carousel" role="button" data-slide="next" aria-label="Siguiente">
+      <a class="right carousel-control" href="#carousel" role="button" data-slide="next" aria-label="Next">
         <span class="icon-next" aria-hidden="true">
           <i class="material-icons">&#xE5CC;</i>
         </span>
