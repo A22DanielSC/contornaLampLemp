@@ -1,0 +1,30 @@
+*ERROR* 	v8.1.4	2024/03/04 - 09:51:38: SQLSTATE[42S02]: Base table or view not found: 1146 Table &#039;sql11688562.ps_configuration&#039; doesn&#039;t exist at line 151 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 09:51:41: SQLSTATE[42S02]: Base table or view not found: 1146 Table &#039;sql11688562.ps_configuration&#039; doesn&#039;t exist at line 151 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 09:51:48: SQLSTATE[42S02]: Base table or view not found: 1146 Table &#039;sql11688562.ps_shop_url&#039; doesn&#039;t exist at line 151 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 09:51:50: SQLSTATE[42S02]: Base table or view not found: 1146 Table &#039;sql11688562.ps_shop_url&#039; doesn&#039;t exist at line 151 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 09:51:52: SQLSTATE[42S02]: Base table or view not found: 1146 Table &#039;sql11688562.ps_shop_url&#039; doesn&#039;t exist at line 151 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 09:51:52: SQLSTATE[42S02]: Base table or view not found: 1146 Table &#039;sql11688562.ps_shop_url&#039; doesn&#039;t exist at line 151 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 09:54:54: Shop not found at line 438 in file classes/shop/Shop.php
+*ERROR* 	v8.1.4	2024/03/04 - 09:54:55: Shop not found at line 438 in file classes/shop/Shop.php
+*ERROR* 	v8.1.4	2024/03/04 - 10:01:55: Link to database cannot be established: SQLSTATE[HY000] [1045] Access denied for user &#039;sql11688562&#039;@&#039;193.144.43.254&#039; (using password: YES) at line 119 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 10:01:55: Link to database cannot be established: SQLSTATE[HY000] [1045] Access denied for user &#039;sql11688562&#039;@&#039;193.144.43.254&#039; (using password: YES) at line 119 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 10:01:56: Link to database cannot be established: SQLSTATE[HY000] [1045] Access denied for user &#039;sql11688562&#039;@&#039;193.144.43.254&#039; (using password: YES) at line 119 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 10:01:57: Link to database cannot be established: SQLSTATE[HY000] [1045] Access denied for user &#039;sql11688562&#039;@&#039;193.144.43.254&#039; (using password: YES) at line 119 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 10:02:04: Link to database cannot be established: SQLSTATE[HY000] [1045] Access denied for user &#039;sql11688562&#039;@&#039;193.144.43.254&#039; (using password: YES) at line 119 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 10:02:04: Link to database cannot be established: SQLSTATE[HY000] [1045] Access denied for user &#039;sql11688562&#039;@&#039;193.144.43.254&#039; (using password: YES) at line 119 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 10:02:09: Link to database cannot be established: SQLSTATE[HY000] [1045] Access denied for user &#039;sql11688562&#039;@&#039;193.144.43.254&#039; (using password: YES) at line 119 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 10:02:09: Link to database cannot be established: SQLSTATE[HY000] [1045] Access denied for user &#039;sql11688562&#039;@&#039;193.144.43.254&#039; (using password: YES) at line 119 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 15:34:14: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection timed out at line 119 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 15:34:25: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection timed out at line 119 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 15:49:21: Link to database cannot be established: SQLSTATE[HY000] [2002] No such file or directory at line 119 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 15:49:21: Link to database cannot be established: SQLSTATE[HY000] [2002] No such file or directory at line 119 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 15:49:22: Link to database cannot be established: SQLSTATE[HY000] [2002] No such file or directory at line 119 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 15:49:22: Link to database cannot be established: SQLSTATE[HY000] [2002] No such file or directory at line 119 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 15:49:23: Link to database cannot be established: SQLSTATE[HY000] [2002] No such file or directory at line 119 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 15:49:23: Link to database cannot be established: SQLSTATE[HY000] [2002] No such file or directory at line 119 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 15:50:31: Link to database cannot be established: SQLSTATE[HY000] [2002] No such file or directory at line 119 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 15:50:31: Link to database cannot be established: SQLSTATE[HY000] [2002] No such file or directory at line 119 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 15:50:52: Link to database cannot be established: SQLSTATE[HY000] [2002] No such file or directory at line 119 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 15:50:52: Link to database cannot be established: SQLSTATE[HY000] [2002] No such file or directory at line 119 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 15:50:54: Link to database cannot be established: SQLSTATE[HY000] [2002] No such file or directory at line 119 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.4	2024/03/04 - 15:50:54: Link to database cannot be established: SQLSTATE[HY000] [2002] No such file or directory at line 119 in file classes/db/DbPDO.php
