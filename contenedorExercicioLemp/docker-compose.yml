@@ -7,14 +7,14 @@ services:
       - 80:80
       - 443:443
     volumes:
-      - ./app:/app
+      - ../contenedorExercicioLamp/app:/app
       - ./nginx/certificados:/certificados
       - ./nginx/configuracion.conf:/etc/nginx/conf.d/configuracion.conf
 
   meuphp:
     build: php
     volumes:
-      - ./app:/app
+      - ../contenedorExercicioLamp/app:/app
       - ./php/www.conf:/etc/php/8.2/fpm/pool.d/www.conf
       - ./php/php.ini:/etc/php/8.2/cli/php.ini
     env_file:
