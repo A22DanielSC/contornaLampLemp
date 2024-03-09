@@ -10,6 +10,8 @@ services:
       - ../contenedorExercicioLamp/app:/app
       - ./nginx/certificados:/certificados
       - ./nginx/configuracion.conf:/etc/nginx/conf.d/configuracion.conf
+    env_file:
+      - .env_prod
 
   meuphp:
     build: php
