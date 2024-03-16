@@ -10,10 +10,10 @@
     <h2>Datos de la tabla ps_zone</h2>
     <?php
     // Datos de conexión a la base de datos
-    $servidor = '10.0.0.220';
-    $usuario = 'a22danielsc';
-    $contrasena = 'abc123.';
-    $base_datos = 'prestashowdb';
+    $servidor = getenv("DATABASE_ADDRESS");
+    $usuario = getenv("MYSQL_USER");
+    $contrasena = getenv("MYSQL_PASSWORD");
+    $base_datos = getenv("MYSQL_DATABASE");
 
     // Conexión a la base de datos
     $conexion = new mysqli($servidor, $usuario, $contrasena, $base_datos);
